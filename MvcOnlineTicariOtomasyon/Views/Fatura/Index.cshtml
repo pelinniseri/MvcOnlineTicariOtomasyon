@@ -1,0 +1,51 @@
+﻿@using MvcOnlineTicariOtomasyon.Models.Siniflar
+@model List<Faturalar>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<table class="table table-bordered" style="margin-top: 20px">
+    <tr>
+        <th>ID</th>
+        <th>Seri No</th>
+        <th>Sıra No</th>
+        <th>Vergi Dairesi</th>
+        <th>Tarih</th>
+        <th>Saat</th>
+        <th>Teslim Eden</th>
+        <th>Teslim Alan</th>
+        <th>Toplam</th>
+        <th>Güncelle</th>
+        <th>Detay</th>
+
+
+    </tr>
+
+    @foreach (var a in Model)
+    {
+<tr>
+    <td>@a.Faturaid</td>
+    <td>@a.FaturaSeriNo</td>
+    <td>@a.FaturaSiraNo</td>
+    <td>@a.VergiDairesi</td>
+    <td>@a.FaturaTarih</td>
+    <td>@a.Saat</td>
+    <td>@a.TeslimEden</td>
+    <td>@a.TeslimAlan</td>
+    <td>@a.Toplam</td>
+    <td><a href="/Fatura/FaturaGetir/@a.Faturaid/" class="btn btn-warning">Güncelle</a></td>
+    <td><a href="/Fatura/FaturaDetay/@a.Faturaid/" class="btn btn-success" style="background-color:lightcoral">Detaylar</a></td>
+
+
+
+</tr>
+    }
+
+
+</table>
+
+<a href="/Fatura/FaturaEkle" class="btn btn-info">Yeni Fatura Girişi</a>
+
+

@@ -1,0 +1,42 @@
+﻿@using MvcOnlineTicariOtomasyon.Models.Siniflar
+@model List<Personel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<table class="table table-bordered" style="margin-top: 20px">
+    <tr>
+        <th>ID</th>
+        <th>Personal Name</th>
+        <th>Personal Nachname</th>
+        <th>Foto</th>
+        <th>Abteilung</th>
+        <th>Löschen</th>
+        <th>Aktualisieren</th>
+        <th>Verkäufe</th>
+       
+       
+
+    </tr>
+
+    @foreach (var k in Model)
+
+    {
+        <tr>
+            <td>@k.Personelid</td>
+            <td>@k.PersonelAd</td>
+            <td>@k.PersonelSoyad</td>
+            <td>@k.PersonelGorsel</td>
+            <td>@k.Departman.DepartmanAd</td>
+            <td><a href="/Personel/PersonelSil/@k.Personelid/" class="btn btn-danger">Löschen</a></td>
+            <td><a href="/Personel/PersonelGetir/@k.Personelid/" class="btn btn-warning">Aktualisieren</a></td>
+            <td><a href="/Departman/DepartmanPersonelSatis/@k.Personelid/" class="btn btn-success" style="background-color:lightcoral">Detail</a></td>
+
+
+        </tr>
+    }
+</table>
+
+<a href="/Personel/PersonelEkle" class="btn btn-info">Mitarbeiter hinzufügen</a>
+

@@ -1,0 +1,31 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Siniflar.Cariler
+
+@{
+    ViewBag.Title = "CariGetir";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Kunden-Update</h2>
+<br />
+@using (Html.BeginForm("CariGuncelle", "Cari", FormMethod.Post)) { 
+
+<div class="form-group">
+    @Html.HiddenFor(x => x.Cariid)
+    @Html.Label("Name")
+    @Html.TextBoxFor(x => x.CariAd, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.CariAd, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Nachname")
+    @Html.TextBoxFor(x => x.CariSoyad, new { @class = "form-control" })
+    <br />
+    @Html.Label("Stadt")
+    @Html.TextBoxFor(x => x.CariSehir, new { @class = "form-control" })
+    <br />
+    @Html.Label("Mail")
+    @Html.TextBoxFor(x => x.CariMail, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-default" style="background-color:yellowgreen">Update</button>
+</div>
+}
+
