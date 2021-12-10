@@ -12,6 +12,8 @@
         <th>Personal Nachname</th>
         <th>Foto</th>
         <th>Abteilung</th>
+        <th>Adresse</th>
+        <th>Telefonnummer</th>
         <th>Löschen</th>
         <th>Aktualisieren</th>
         <th>Verkäufe</th>
@@ -27,8 +29,12 @@
             <td>@k.Personelid</td>
             <td>@k.PersonelAd</td>
             <td>@k.PersonelSoyad</td>
-            <td>@k.PersonelGorsel</td>
+            <td>
+                <img src="@k.PersonelGorsel" style="width:100px; height:50px" />
+            </td>
             <td>@k.Departman.DepartmanAd</td>
+            <td>@k.PersonelAdres</td>
+            <td>@k.PersonelTel</td>
             <td><a href="/Personel/PersonelSil/@k.Personelid/" class="btn btn-danger">Löschen</a></td>
             <td><a href="/Personel/PersonelGetir/@k.Personelid/" class="btn btn-warning">Aktualisieren</a></td>
             <td><a href="/Departman/DepartmanPersonelSatis/@k.Personelid/" class="btn btn-success" style="background-color:lightcoral">Detail</a></td>

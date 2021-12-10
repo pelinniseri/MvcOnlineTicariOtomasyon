@@ -27,6 +27,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
                                                Text = x.DepartmanAd,
                                                Value = x.Departmanid.ToString(),
                                            }).ToList();
+
             ViewBag.dgr1 = deger1;
             return View();
         }
@@ -34,6 +35,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
         public ActionResult PersonelEkle(Personel p)
         {
             c.Personels.Add(p);
+            p.Durum = true;
             c.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -58,6 +60,8 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             prsn.PersonelSoyad = p.PersonelSoyad;
             prsn.PersonelGorsel = p.PersonelGorsel;
             prsn.Departmanid = p.Departmanid;
+            prsn.PersonelTel = p.PersonelTel;
+            p.PersonelAdres = p.PersonelAdres;
             c.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -69,6 +73,11 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
 
+        }
+        public ActionResult PersonelDetayListe()
+        {
+            var sorgu = c.Personels.ToList();
+            return View(sorgu);
         }
     }
 }

@@ -1,0 +1,26 @@
+﻿@using MvcOnlineTicariOtomasyon.Models.Siniflar
+@model List<SatisHareket>
+@{
+    ViewBag.Title = "Siparislerim";
+    Layout = "~/Views/Shared/_CariLayout.cshtml";
+}
+<br />
+<h2>Bestellverlauf</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Produktname</th>
+        <th>Preis</th>
+        <th>Datum</th>
+    </tr>
+    @foreach(var x in Model)
+            {
+                <tr>
+                    <td>@x.Urun.UrunAd</td>
+                    <td>@x.Urun.SatisFiyat</td>
+                    <td>@Convert.ToDateTime(x.Tarih).ToString("dd/MM/yyyy")</td>
+                </tr>
+            }
+    
+</table>
+

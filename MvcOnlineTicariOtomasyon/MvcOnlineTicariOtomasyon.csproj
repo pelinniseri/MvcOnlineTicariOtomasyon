@@ -79,6 +79,12 @@
     <Reference Include="Microsoft.Identity.Client, Version=4.1.0.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Identity.Client.4.1.0\lib\net45\Microsoft.Identity.Client.dll</HintPath>
     </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
@@ -188,14 +194,17 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CariController.cs" />
+    <Compile Include="Controllers\CariPanelController.cs" />
     <Compile Include="Controllers\DepartmanController.cs" />
     <Compile Include="Controllers\FaturaController.cs" />
     <Compile Include="Controllers\GaleriController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IstatistikController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PersonelController.cs" />
     <Compile Include="Controllers\SatisController.cs" />
+    <Compile Include="Controllers\ToDoController.cs" />
     <Compile Include="Controllers\UrunController.cs" />
     <Compile Include="Controllers\UrunDetayController.cs" />
     <Compile Include="Global.asax.cs">
@@ -215,6 +224,9 @@
     <Compile Include="Models\Siniflar\Personel.cs" />
     <Compile Include="Models\Siniflar\SatisHareket.cs" />
     <Compile Include="Models\Siniflar\SinifGrup.cs" />
+    <Compile Include="Models\Siniflar\SinifGrup2.cs" />
+    <Compile Include="Models\Siniflar\SinifGrup3.cs" />
+    <Compile Include="Models\Siniflar\ToDo.cs" />
     <Compile Include="Models\Siniflar\Urun.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -2212,6 +2224,7 @@
     <Content Include="Content\DataTables\images\sort_desc.png" />
     <Content Include="Content\DataTables\images\sort_desc_disabled.png" />
     <Content Include="Content\DataTables\swf\flashExport.swf" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -2757,6 +2770,35 @@
     <Content Include="AdminLTE-3.0.4\plugins\sweetalert2-theme-bootstrap-4\bootstrap-4.scss" />
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.js.map" />
     <Content Include="AdminLTE-3.0.4\README.md" />
+    <Content Include="webkundepanel\.gitignore" />
+    <Content Include="webkundepanel\css\simple-sidebar.css" />
+    <Content Include="webkundepanel\gulpfile.js" />
+    <Content Include="webkundepanel\index.html" />
+    <Content Include="webkundepanel\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="webkundepanel\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="webkundepanel\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="webkundepanel\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="webkundepanel\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="webkundepanel\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="webkundepanel\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="webkundepanel\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="webkundepanel\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="webkundepanel\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="webkundepanel\vendor\jquery\jquery.js" />
+    <Content Include="webkundepanel\vendor\jquery\jquery.min.js" />
+    <Content Include="webkundepanel\vendor\jquery\jquery.slim.js" />
+    <Content Include="webkundepanel\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="weblogin\css\font-awesome.css" />
+    <Content Include="weblogin\css\popup-box.css" />
+    <Content Include="weblogin\css\style.css" />
+    <Content Include="weblogin\fonts\fontawesome-webfont.svg" />
+    <Content Include="weblogin\images\photo.jpg" />
+    <Content Include="weblogin\images\photo2.jpg" />
+    <Content Include="weblogin\images\video.mp4" />
+    <Content Include="weblogin\index.html" />
+    <Content Include="weblogin\js\jquery-2.1.4.min.js" />
+    <Content Include="weblogin\js\jquery.magnific-popup.js" />
+    <Content Include="weblogin\w3layouts-License.txt" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2969,6 +3011,38 @@
     <Content Include="thumber\scss\_site-navbar.scss" />
     <Content Include="Views\UrunDetay\Index.cshtml" />
     <Content Include="Views\Istatistik\simpleTables.cshtml" />
+    <Content Include="Views\Istatistik\PView.cshtml" />
+    <Content Include="Views\Istatistik\PView2.cshtml" />
+    <Content Include="Views\Personel\PersonelDetayListe.cshtml" />
+    <Content Include="Views\ToDo\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="weblogin\fonts\fontawesome-webfont.eot" />
+    <Content Include="weblogin\fonts\fontawesome-webfont.ttf" />
+    <Content Include="weblogin\fonts\fontawesome-webfont.woff" />
+    <Content Include="weblogin\fonts\fontawesome-webfont.woff2" />
+    <Content Include="weblogin\fonts\FontAwesome.otf" />
+    <Content Include="Views\Login\Partial1.cshtml" />
+    <Content Include="webkundepanel\.travis.yml" />
+    <Content Include="webkundepanel\LICENSE" />
+    <Content Include="webkundepanel\package-lock.json" />
+    <Content Include="webkundepanel\package.json" />
+    <Content Include="webkundepanel\README.md" />
+    <Content Include="webkundepanel\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="webkundepanel\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="webkundepanel\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="webkundepanel\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="webkundepanel\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="webkundepanel\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="webkundepanel\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="webkundepanel\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="webkundepanel\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="webkundepanel\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="webkundepanel\vendor\jquery\jquery.min.map" />
+    <Content Include="webkundepanel\vendor\jquery\jquery.slim.min.map" />
+    <Content Include="Views\Shared\_CariLayout.cshtml" />
+    <Content Include="Views\CariPanel\Index.cshtml" />
+    <Content Include="Views\CariPanel\Siparislerim.cshtml" />
+    <Content Include="Views\UrunDetay\UrunDetayiGetir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

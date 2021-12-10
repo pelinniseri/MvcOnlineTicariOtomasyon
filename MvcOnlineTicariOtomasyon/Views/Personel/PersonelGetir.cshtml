@@ -25,6 +25,12 @@
     @Html.Label("Abteilung")
     @Html.DropDownListFor(x => x.Departmanid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
     <br />
+    @Html.Label("Adresse")
+    @Html.TextBoxFor(x => x.PersonelAdres, new { @class = "form-control" })
+    <br />
+    @Html.Label("Telefonnummer")
+    @Html.TextBoxFor(x => x.PersonelTel, new { @class = "form-control" })
+    <br />
     <button class="btn btn-default" style="background-color:yellowgreen">Aktualisieren</button>
 </div>
 }

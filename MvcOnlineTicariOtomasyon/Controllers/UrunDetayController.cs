@@ -10,6 +10,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
     {
         // GET: UrunDetay
         Context c = new Context();
+       
         public ActionResult Index()
         {
             Class1 cs = new Class1();
@@ -18,5 +19,8 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             cs.Deger2 = c.Detays.Where(y => y.DetayId== 1).ToList();
             return View(cs);
         }
+
+     
+
     }
 }

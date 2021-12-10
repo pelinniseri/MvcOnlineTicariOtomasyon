@@ -6,8 +6,6 @@
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,6 +37,7 @@
         <!-- Main Sidebar Container -->
         <!-- Main content -->
         <section class="content">
+
             <!-- Default box -->
             <div class="card card-solid">
                 @foreach (var x in Model.Deger1)
@@ -46,7 +45,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-12 col-sm-6">
-                                <h3 class="d-inline-block d-sm-none">LOWA Men’s Renegade GTX Mid Hiking Boots Review</h3>
+                                <h3 class="d-inline-block d-sm-none">@x.UrunAd</h3>
                                 <div class="col-12">
                                     <img src="@x.UrunGorsel" class="product-image" alt="Product Image">
                                 </div>
@@ -198,8 +197,4 @@
     <script src="~/AdminLTE-3.0.4/dist/js/demo.js"></script>
 </body>
 </html>
-
-
-
-
 
