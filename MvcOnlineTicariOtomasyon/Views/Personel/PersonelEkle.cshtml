@@ -7,6 +7,7 @@
 <br />
 <h2>Neue Angestellteseite</h2>
 <br />
+@using (Html.BeginForm("PersonelEkle", "Personel", FormMethod.Post, new { enctype = "multipart-form/data" })) {
 <form class="form-group" method="post">
     @Html.Label("Personal Name")
     @Html.TextBoxFor(x => x.PersonelAd, new { @class = "form-control" })
@@ -15,7 +16,7 @@
     @Html.TextBoxFor(x => x.PersonelSoyad, new { @class = "form-control" })
     <br />
     @Html.Label("Foto")
-    @Html.TextBoxFor(x => x.PersonelGorsel, new { @class = "form-control" })
+    <input type="file" name="PersonelGorsel" />
     <br />
 
     @Html.Label("Abteilung")
@@ -30,5 +31,5 @@
     <br />
     <button class="btn btn-primary">Speichern</button>
 </form>
-
+}
 
