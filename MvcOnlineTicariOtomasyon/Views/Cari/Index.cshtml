@@ -1,5 +1,7 @@
 ﻿@using MvcOnlineTicariOtomasyon.Models.Siniflar
-@model List<Cariler>
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<Cariler>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
@@ -31,6 +33,14 @@
             <td><a href="/Cari/MusteriSatis/@x.Cariid" class="btn btn-default" style="background-color:lightcoral">Verkaufshistorie</a></td>
         </tr>
     }
-
 </table>
+
+@Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("Index", new { sayfa }), new PagedListRenderOptions
+{
+
+    LiElementClasses = new List<string>
+
+    {"page-link"}
+
+})
 <a href="/Cari/YeniCari/" class="btn btn-info">Neuen Kunden hinzufügen</a>
