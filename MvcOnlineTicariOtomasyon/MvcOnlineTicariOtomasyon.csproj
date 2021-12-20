@@ -265,6 +265,8 @@
     <Content Include="AdminLTE-3.0.4\dist\css\alt\adminlte.pages.min.css" />
     <Content Include="AdminLTE-3.0.4\dist\css\alt\adminlte.plugins.css" />
     <Content Include="AdminLTE-3.0.4\dist\css\alt\adminlte.plugins.min.css" />
+    <Content Include="AdminLTE-3.0.4\dist\img\1.jpg" />
+    <Content Include="AdminLTE-3.0.4\dist\img\3.png" />
     <Content Include="AdminLTE-3.0.4\dist\img\AdminLTELogo.png" />
     <Content Include="AdminLTE-3.0.4\dist\img\avatar.png" />
     <Content Include="AdminLTE-3.0.4\dist\img\avatar04.png" />
@@ -275,6 +277,7 @@
     <Content Include="AdminLTE-3.0.4\dist\img\boxed-bg.png" />
     <Content Include="AdminLTE-3.0.4\dist\img\credit\american-express.png" />
     <Content Include="AdminLTE-3.0.4\dist\img\credit\cirrus.png" />
+    <Content Include="AdminLTE-3.0.4\dist\img\mail-icon.png" />
     <Content Include="AdminLTE-3.0.4\dist\img\credit\mastercard.png" />
     <Content Include="AdminLTE-3.0.4\dist\img\credit\mestro.png" />
     <Content Include="AdminLTE-3.0.4\dist\img\credit\paypal.png" />
@@ -3050,6 +3053,8 @@
     <Content Include="Views\CariPanel\GidenMesajlar.cshtml" />
     <Content Include="Views\CariPanel\MesajDetay.cshtml" />
     <Content Include="Views\CariPanel\YeniMesaj.cshtml" />
+    <Content Include="Views\CariPanel\Partial1.cshtml" />
+    <Content Include="Views\CariPanel\Partial2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
