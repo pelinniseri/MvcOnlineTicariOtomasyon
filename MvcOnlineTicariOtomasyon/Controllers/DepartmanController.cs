@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
 using MvcOnlineTicariOtomasyon.Models.Siniflar;
 namespace MvcOnlineTicariOtomasyon.Controllers
 {
@@ -11,9 +13,10 @@ namespace MvcOnlineTicariOtomasyon.Controllers
         // GET: Departman
 
         Context c = new Context();
-        public ActionResult Index()
+
+        public ActionResult Index(int sayfa = 1)
         {
-            var degerler = c.Departmans.Where(x=> x.Durum==true).ToList();
+            var degerler = c.Departmans.Where(x=> x.Durum==true).ToList().ToPagedList(sayfa, 4);
             return View(degerler);
         }
 

@@ -1,5 +1,7 @@
 ﻿@using MvcOnlineTicariOtomasyon.Models.Siniflar
-@model List<Personel>
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<Personel>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
@@ -17,8 +19,8 @@
         <th>Löschen</th>
         <th>Aktualisieren</th>
         <th>Verkäufe</th>
-       
-       
+
+
 
     </tr>
 
@@ -43,6 +45,15 @@
         </tr>
     }
 </table>
+
+@Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("Index", new { sayfa }), new PagedListRenderOptions
+{
+
+    LiElementClasses = new List<string>
+
+    {"page-link"}
+
+})
 
 <a href="/Personel/PersonelEkle" class="btn btn-info">Mitarbeiter hinzufügen</a>
 

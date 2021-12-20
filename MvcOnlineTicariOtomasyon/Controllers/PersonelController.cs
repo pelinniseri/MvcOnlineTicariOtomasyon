@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
 using MvcOnlineTicariOtomasyon.Models.Siniflar;
 namespace MvcOnlineTicariOtomasyon.Controllers
 {
@@ -10,9 +13,9 @@ namespace MvcOnlineTicariOtomasyon.Controllers
     {
         // GET: Personel
         Context c = new Context();
-        public ActionResult Index()
+        public ActionResult Index(int sayfa=1)
         {
-            var personel = c.Personels.Where(x => x.Durum == true).ToList();
+            var personel = c.Personels.Where(x => x.Durum == true).ToList().ToPagedList(sayfa,4);
             return View(personel);
             
         }
@@ -34,6 +37,14 @@ namespace MvcOnlineTicariOtomasyon.Controllers
         [HttpPost]
         public ActionResult PersonelEkle(Personel p)
         {
+            if (Request.Files.Count > 0)
+            {
+                string dosyaadi = Path.GetFileName(Request.Files[0].FileName);
+                string uzanti = Path.GetExtension(Request.Files[0].FileName);
+                string yol = "~/image/" + dosyaadi + uzanti;
+                Request.Files[0].SaveAs(Server.MapPath(yol));
+                p.PersonelGorsel = "/image/" + dosyaadi + uzanti;
+            }
             c.Personels.Add(p);
             p.Durum = true;
             c.SaveChanges();
@@ -55,6 +66,14 @@ namespace MvcOnlineTicariOtomasyon.Controllers
 
         public ActionResult PersonelGuncelle(Personel p)
         {
+            if (Request.Files.Count > 0)
+            {
+                string dosyaadi = Path.GetFileName(Request.Files[0].FileName);
+                string uzanti = Path.GetExtension(Request.Files[0].FileName);
+                string yol = "~/image/" + dosyaadi + uzanti;
+                Request.Files[0].SaveAs(Server.MapPath(yol));
+                p.PersonelGorsel = "/image/" + dosyaadi + uzanti;
+            }
             var prsn = c.Personels.Find(p.Personelid);
             prsn.PersonelAd = p.PersonelAd;
             prsn.PersonelSoyad = p.PersonelSoyad;
