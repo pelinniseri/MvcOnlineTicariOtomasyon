@@ -207,7 +207,6 @@
     <Compile Include="Controllers\SatisController.cs" />
     <Compile Include="Controllers\ToDoController.cs" />
     <Compile Include="Controllers\UrunController.cs" />
-    <Compile Include="Controllers\UrunDetayController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

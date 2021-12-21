@@ -39,11 +39,15 @@ namespace MvcOnlineTicariOtomasyon.Controllers
         {
             if (Request.Files.Count > 0)
             {
-                string dosyaadi = Path.GetFileName(Request.Files[0].FileName);
+                string dosyaAdi = Path.GetFileName(Request.Files[0].FileName);
+
                 string uzanti = Path.GetExtension(Request.Files[0].FileName);
-                string yol = "~/image/" + dosyaadi + uzanti;
+
+                string yol = "/image/" + dosyaAdi;
+
                 Request.Files[0].SaveAs(Server.MapPath(yol));
-                p.PersonelGorsel = "/image/" + dosyaadi + uzanti;
+
+                p.PersonelGorsel = "/image/" + dosyaAdi;
             }
             c.Personels.Add(p);
             p.Durum = true;
@@ -70,9 +74,9 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             {
                 string dosyaadi = Path.GetFileName(Request.Files[0].FileName);
                 string uzanti = Path.GetExtension(Request.Files[0].FileName);
-                string yol = "~/image/" + dosyaadi + uzanti;
+                string yol = "~/Images/" + dosyaadi + uzanti;
                 Request.Files[0].SaveAs(Server.MapPath(yol));
-                p.PersonelGorsel = "/image/" + dosyaadi + uzanti;
+                p.PersonelGorsel = "/Images/" + dosyaadi + uzanti;
             }
             var prsn = c.Personels.Find(p.Personelid);
             prsn.PersonelAd = p.PersonelAd;
