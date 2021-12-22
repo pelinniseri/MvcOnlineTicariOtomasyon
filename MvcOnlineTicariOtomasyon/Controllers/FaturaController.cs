@@ -66,5 +66,14 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult Dinamik()
+        {
+            FaturaFaturaKalem faturaFaturaKalem = new FaturaFaturaKalem();
+            faturaFaturaKalem.DegerFaturalars = c.Faturalars.ToList();
+            faturaFaturaKalem.DegerFaturaKalems = c.FaturaKalems.ToList();
+            return View(faturaFaturaKalem);
+        }
+
     }
 }
