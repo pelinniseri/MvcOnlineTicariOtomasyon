@@ -77,7 +77,7 @@
 
                                     }
 
-                                    @foreach (var order in item.FaturaKalems)
+                                    @foreach (var order in Model.deger2.Where(x => x.Faturaid == item.Faturaid))
 
                                     {
 
