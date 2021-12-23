@@ -69,10 +69,10 @@ namespace MvcOnlineTicariOtomasyon.Controllers
 
         public ActionResult Dinamik()
         {
-            FaturaFaturaKalem faturaFaturaKalem = new FaturaFaturaKalem();
-            faturaFaturaKalem.DegerFaturalars = c.Faturalars.ToList();
-            faturaFaturaKalem.DegerFaturaKalems = c.FaturaKalems.ToList();
-            return View(faturaFaturaKalem);
+            DinamikFatura dinamikFatura = new DinamikFatura();
+            dinamikFatura.deger1 = c.Faturalars.ToList();
+            dinamikFatura.deger2 = c.FaturaKalems.ToList();
+            return View(dinamikFatura);
         }
 
     }
