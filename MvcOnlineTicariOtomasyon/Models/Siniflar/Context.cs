@@ -21,5 +21,6 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
         public DbSet<Detay> Detays { get; set; }
         public DbSet<ToDo> toDos { get; set; }
         public DbSet<Message> Messages { get; set; }
+        public DbSet<PasswordCode> PasswordCodes { get; set; }
     }
 }
