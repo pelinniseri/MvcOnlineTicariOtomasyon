@@ -215,6 +215,10 @@
     <Compile Include="Migrations\202112241913369_a.designer.cs">
       <DependentUpon>202112241913369_a.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112250910190_adminpassw.cs" />
+    <Compile Include="Migrations\202112250910190_adminpassw.designer.cs">
+      <DependentUpon>202112250910190_adminpassw.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Siniflar\Admin.cs" />
     <Compile Include="Models\Siniflar\Cariler.cs" />
@@ -230,6 +234,7 @@
     <Compile Include="Models\Siniflar\Kategori.cs" />
     <Compile Include="Models\Siniflar\Message.cs" />
     <Compile Include="Models\Siniflar\PasswordCode.cs" />
+    <Compile Include="Models\Siniflar\PasswordCodeForAdmin.cs" />
     <Compile Include="Models\Siniflar\Personel.cs" />
     <Compile Include="Models\Siniflar\SatisHareket.cs" />
     <Compile Include="Models\Siniflar\SinifGrup.cs" />
@@ -3067,6 +3072,8 @@
     <Content Include="Views\Kategori\Deneme.cshtml" />
     <Content Include="Views\Login\ForgetPassword.cshtml" />
     <Content Include="Views\Login\ResetPassword.cshtml" />
+    <Content Include="Views\Login\ForgetPasswordForAdmin.cshtml" />
+    <Content Include="Views\Login\ResetPasswordForAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -3099,6 +3106,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202112241913369_a.resx">
       <DependentUpon>202112241913369_a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112250910190_adminpassw.resx">
+      <DependentUpon>202112250910190_adminpassw.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
