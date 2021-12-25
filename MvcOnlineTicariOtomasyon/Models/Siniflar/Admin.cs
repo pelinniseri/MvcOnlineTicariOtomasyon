@@ -20,6 +20,7 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
         [Column(TypeName = "Char")]
         [StringLength(1)]
         public string Autorisation { get; set; }
-        
+        public string AdminMail { get; set; }
+
     }
 }
