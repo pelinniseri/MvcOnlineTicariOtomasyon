@@ -203,7 +203,6 @@
     <Compile Include="Controllers\IstatistikController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\PersonelController.cs" />
     <Compile Include="Controllers\SatisController.cs" />
     <Compile Include="Controllers\ToDoController.cs" />
@@ -3241,7 +3240,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="image\" />
-    <Folder Include="Views\Message\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

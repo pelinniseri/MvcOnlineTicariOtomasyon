@@ -11,12 +11,12 @@
 <table class="table table-striped">
     <tr>
         <th>ID</th>
-        <th>Vorname</th>
-        <th>Nachname</th>
-        <th>Stadt</th>
-        <th>Mail</th>
-        <th>Löschen</th>
-        <th>Aktualisieren</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>City</th>
+        <th>E-Mail</th>
+        <th>Remove</th>
+        <th>Update</th>
         <th>Detail</th>
     </tr>
 
@@ -28,9 +28,9 @@
             <td>@x.CariSoyad</td>
             <td>@x.CariSehir</td>
             <td>@x.CariMail</td>
-            <td><a href="/Cari/CariSil/@x.Cariid/" class="btn btn-danger">Löschen</a></td>
-            <td><a href="/Cari/CariGetir/@x.Cariid/" class="btn btn-warning">Aktualisieren</a></td>
-            <td><a href="/Cari/MusteriSatis/@x.Cariid" class="btn btn-default" style="background-color:lightcoral">Verkaufshistorie</a></td>
+            <td><a href="/Cari/CariSil/@x.Cariid/" class="btn btn-danger">Remove</a></td>
+            <td><a href="/Cari/CariGetir/@x.Cariid/" class="btn btn-warning">Update</a></td>
+            <td><a href="/Cari/MusteriSatis/@x.Cariid" class="btn btn-default" style="background-color:lightcoral">Sales history</a></td>
         </tr>
     }
 </table>
@@ -43,4 +43,4 @@
     {"page-link"}
 
 })
-<a href="/Cari/YeniCari/" class="btn btn-info">Neuen Kunden hinzufügen</a>
+<a href="/Cari/YeniCari/" class="btn btn-info">Add new customer</a>

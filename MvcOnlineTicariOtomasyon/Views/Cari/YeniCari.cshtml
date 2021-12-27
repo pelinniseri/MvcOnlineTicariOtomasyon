@@ -5,23 +5,23 @@
 }
 
 <br />
-<h2>Neue Kundenseite</h2>
+<h2>New customer site</h2>
 <br />
 
 <form class="form-group" method="post">
     @Html.Label("Name")
     @Html.TextBoxFor(x => x.CariAd, new { @class = "form-control" })
     <br />
-    @Html.Label("Nachname")
+    @Html.Label("Surname")
     @Html.TextBoxFor(x => x.CariSoyad, new { @class = "form-control" })
     <br />
-    @Html.Label("Stadt")
+    @Html.Label("City")
     @Html.TextBoxFor(x => x.CariSehir, new { @class = "form-control" })
     <br />
-    @Html.Label("Mail")
+    @Html.Label("E-Mail")
     @Html.TextBoxFor(x => x.CariMail, new { @class = "form-control" })
     <br />
-    <button class="btn btn-info">Speichern</button>
+    <button class="btn btn-info">Save</button>
 </form>
 
 

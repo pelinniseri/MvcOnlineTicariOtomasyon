@@ -8,22 +8,24 @@
 
 <br />
 <ol class="breadcrumb mb-4">
-    <li class="breadcrumb-item active">Kundenname: @ViewBag.cari</li>
+    <li class="breadcrumb-item active">Customer Name: @ViewBag.cari</li>
 </ol>
 <table class="table table-condensed">
     <tr>
-        <th>Verkaufs-ID</th>
-        <th>Produkt</th>
-        <th>Mitarbeiter</th>
-        <th>Preis</th>
-        <th>Anzahl</th>
-        <th>Gesamt</th>
-        <th>Datum</th>
-        <th>Drucken</th>
+        <th>Sales ID</th>
+        <th>Product</th>
+        <th>Employees</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th>Date</th>
+        
     </tr>
+
 
     @foreach (var x in Model)
     {
+        
         <tr>
             <td>@x.Satisid</td>
             <td>@x.Urun.UrunAd</td>
@@ -32,7 +34,8 @@
             <td>@x.Adet</td>
             <td>@x.ToplamTutar</td>
             <td>@x.Tarih</td>
-            <td><a href="#" class="btn btn-default" style="background-color:dodgerblue">Drucken</a></td>
+
+
         </tr>
 
     }

@@ -73,7 +73,9 @@ namespace MvcOnlineTicariOtomasyon.Controllers
         {
             var deger = c.SatisHarekets.Where(x => x.Cariid == id).ToList();
             var cr = c.Carilers.Where(x => x.Cariid == id).Select(y => y.CariAd + " " + y.CariSoyad).FirstOrDefault();
+            
             ViewBag.cari = cr;
+
             return View(deger);
         }
 

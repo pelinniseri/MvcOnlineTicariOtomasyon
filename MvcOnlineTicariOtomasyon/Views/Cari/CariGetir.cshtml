@@ -6,7 +6,7 @@
 }
 
 <br />
-<h2>Kunden-Update</h2>
+<h2>Customer update</h2>
 <br />
 @using (Html.BeginForm("CariGuncelle", "Cari", FormMethod.Post)) { 
 
@@ -16,13 +16,13 @@
     @Html.TextBoxFor(x => x.CariAd, new { @class = "form-control" })
     @Html.ValidationMessageFor(x => x.CariAd, "", new { @style = "color:red" })
     <br />
-    @Html.Label("Nachname")
+    @Html.Label("Surname")
     @Html.TextBoxFor(x => x.CariSoyad, new { @class = "form-control" })
     <br />
-    @Html.Label("Stadt")
+    @Html.Label("City")
     @Html.TextBoxFor(x => x.CariSehir, new { @class = "form-control" })
     <br />
-    @Html.Label("Mail")
+    @Html.Label("E-Mail")
     @Html.TextBoxFor(x => x.CariMail, new { @class = "form-control" })
     <br />
     <button class="btn btn-default" style="background-color:yellowgreen">Update</button>
