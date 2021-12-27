@@ -199,6 +199,7 @@
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\FaturaController.cs" />
     <Compile Include="Controllers\GaleriController.cs" />
+    <Compile Include="Controllers\GrafikController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IstatistikController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
@@ -3240,6 +3241,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="image\" />
+    <Folder Include="Views\deneme\" />
+    <Folder Include="Views\Grafik\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
