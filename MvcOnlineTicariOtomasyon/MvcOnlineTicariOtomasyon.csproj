@@ -3237,12 +3237,12 @@
     <Content Include="Webbb\src\scss\variables\_spacing.scss" />
     <Content Include="Webbb\src\scss\_global.scss" />
     <Content Include="Webbb\src\scss\_variables.scss" />
+    <Content Include="Views\Grafik\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="image\" />
     <Folder Include="Views\deneme\" />
-    <Folder Include="Views\Grafik\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
