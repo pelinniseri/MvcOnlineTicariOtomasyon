@@ -186,7 +186,7 @@
 
                             <div class="col-md-4">
 
-                                <input type="text" id="Tarih" name="Tarih" placeholder="Datum" class="form-control" />
+                                <input type="text" id="FaturaTarih" name="FaturaTarih" placeholder="Datum" class="form-control" />
 
                             </div>
 
@@ -460,7 +460,7 @@
 
                 type: 'POST',
 
-                url: "/Siparis/SaveOrder",
+                url: "/Fatura/FaturaKaydet",
 
                 data: data,
 
@@ -500,13 +500,13 @@
 
                 orderArr.push({
 
-                    urun: $(this).find('td:eq(0)').html(),
+                    Aciklama: $(this).find('td:eq(0)').html(),
 
-                    Adet: $(this).find('td:eq(1)').html(),
+                    Miktar: $(this).find('td:eq(1)').html(),
 
-                    Fiyat: $(this).find('td:eq(2)').html(),
+                    BirimFiyat: $(this).find('td:eq(2)').html(),
 
-                    Toplam: $(this).find('td:eq(3)').html()
+                    Tutar: $(this).find('td:eq(3)').html()
 
                 });
 
@@ -518,11 +518,17 @@
 
             var data = JSON.stringify({
 
-                ad: $("#ad").val(),
+                FaturaSeriNo: $("#FaturaSeriNo").val(),
+                FaturaSiraNo: $("#FaturaSiraNo").val(),
+                FaturaTarih: $("#FaturaTarih").val(),
+                Saat: $("#Saat").val(),
+                VergiDairesi: $("#VergiDairesi").val(),
+                TeslimEden: $("#TeslimEden").val(),
+                TeslimAlan: $("#TeslimAlan").val(),
+                Toplam: $("#Toplam").val(),
+                
 
-                sehir: $("#sehir").val(),
-
-                order: orderArr
+                kalemler: orderArr
 
             });
 
