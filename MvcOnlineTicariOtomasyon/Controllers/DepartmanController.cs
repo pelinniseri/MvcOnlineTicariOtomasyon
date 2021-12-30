@@ -19,7 +19,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             var degerler = c.Departmans.Where(x=> x.Durum==true).ToList().ToPagedList(sayfa, 4);
             return View(degerler);
         }
-        [Authorize(Roles =("A"))]
+        [Authorize(Roles =("H"))]
         [HttpGet]
         public ActionResult DepartmanEkle()
         {
@@ -35,7 +35,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
-
+        [Authorize(Roles = ("H"))]
         public ActionResult DepartmanSil(int id)
         {
             var dep = c.Departmans.Find(id);
@@ -49,7 +49,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             var dpt = c.Departmans.Find(id);
             return View("DepartmanGetir", dpt);
         }
-
+        [Authorize(Roles = ("H"))]
         public ActionResult DepartmanGuncelle(Departman d)
         {
             var dept = c.Departmans.Find(d.Departmanid);
@@ -57,6 +57,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
+        [Authorize(Roles = ("H"))]
         public ActionResult DepartmanDetay(int id)
         {
             var degerler = c.Personels.Where(x => x.Departmanid == id).ToList();
