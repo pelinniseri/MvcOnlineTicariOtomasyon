@@ -6,7 +6,7 @@
 
 
 <br />
-<h2>Abteilungs-Update</h2>
+<h2>Department Update</h2>
 <br />
 
 @using (Html.BeginForm("DepartmanGuncelle", "Departman", FormMethod.Post))
@@ -16,7 +16,7 @@
         @Html.TextBoxFor(x => x.DepartmanAd, new { @class = "form-control" })
         @Html.HiddenFor(x => x.Departmanid)
         <br />
-        <button class="btn btn-warning">Aktualisieren</button>
+        <button class="btn btn-warning">Save changes</button>
 
     </div>
 }

@@ -10,9 +10,9 @@
 <table class="table table-bordered" style="margin-top: 20px">
     <tr>
         <th>ID </th>
-        <th>Abteilungsname</th>
-        <th>Löschen</th>
-        <th>Aktualisieren</th>
+        <th>Department name</th>
+        <th>Delete</th>
+        <th>Update</th>
         <th>Detail</th>
 
 
@@ -23,8 +23,8 @@
         <tr>
             <td>@k.Departmanid</td>
             <td>@k.DepartmanAd</td>
-            <td><a href="/Departman/DepartmanSil/@k.Departmanid/" class="btn btn-danger">Löschen</a></td>
-            <td><a href="/Departman/DepartmanGetir/@k.Departmanid/" class="btn btn-warning">Aktualisieren</a></td>
+            <td><a href="/Departman/DepartmanSil/@k.Departmanid/" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Departman/DepartmanGetir/@k.Departmanid/" class="btn btn-warning">Update</a></td>
             <td><a href="/Departman/DepartmanDetay/@k.Departmanid/" class="btn btn-success" style="background-color:lightcoral">Detail</a></td>
 
 
@@ -42,7 +42,7 @@
 })
 
 
-<a href="/Departman/DepartmanEkle" class="btn btn-info">Abteilung hinzufügen</a>
+<a href="/Departman/DepartmanEkle" class="btn btn-info">Add department</a>
 
 
 

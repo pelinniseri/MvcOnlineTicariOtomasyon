@@ -5,21 +5,21 @@
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 <br />
-<h2>Abteilung Personalvertrieb</h2>
+<h2>Personal Sales Department</h2>
 <br />
 <ol class="breadcrumb mb-4">
-    <li class="breadcrumb-item active">Personal Name: @ViewBag.dp</li>
+    <li class="breadcrumb-item active">Personal name: @ViewBag.dp</li>
 </ol>
 <table class="table table-condensed">
     <tr>
         
-        <th>Produkt</th>
-        <th>Kunde</th>
-        <th>Preis ₺</th>
-        <th>Anzahl</th>
-        <th>Gesamt</th>
-        <th>Datum</th>
-        <th>Drucken</th>
+        <th>Product</th>
+        <th>Customer</th>
+        <th>Price ₺</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th>Date</th>
+        <th>Press</th>
     </tr>
     
         @foreach(var x in Model)
@@ -32,7 +32,7 @@
                 <td>@x.Adet</td>            
                 <td>@x.ToplamTutar</td>            
                 <td>@x.Tarih</td>            
-                <td><a href="#" class="btn btn-default" style="background-color:dodgerblue">Drucken</a></td>            
+                <td><a href="#" class="btn btn-default" style="background-color:dodgerblue">Press</a></td>            
             </tr>
 
             }

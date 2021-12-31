@@ -5,11 +5,11 @@
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 <br />
-<h2>Abteilungsdetailseite</h2>
+<h2>Department Detail Page</h2>
 <br />
 
 <ol class="breadcrumb mb-4">
-    <li class="breadcrumb-item active">Abteilungsname: @ViewBag.d</li>
+    <li class="breadcrumb-item active">Department name: @ViewBag.d</li>
 </ol>
 
 <table class="table table-hover">
@@ -17,7 +17,7 @@
         
         <th>Personal</th>
         
-        <th>Verkäufe</th>
+        <th>Sales</th>
     </tr>
     @foreach (var x in Model)
     {
