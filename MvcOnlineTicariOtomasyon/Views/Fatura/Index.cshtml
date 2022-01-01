@@ -8,15 +8,15 @@
 
 <table class="table table-bordered" style="margin-top: 20px">
     <tr>
-        
-        <th>Seri Sıra No</th>
-        <th>Tarih</th>
-        <th>Saat</th>
-        <th>Toplam</th>
-        <th>Güncelle</th>
+        <th>ID</th>
+        <th>Serial No</th>
+        <th>Date</th>
+        <th>Hour</th>
+        <th>Total</th>
+        <th>Update</th>
    
-        <th>Popup</th>
-        <th>Yeni Kalem</th>
+      
+        <th>New entry</th>
 
 
     </tr>
@@ -24,15 +24,15 @@
     @foreach (var a in Model)
     {
 <tr>
-    
+    <td>@a.Faturaid</td>
     <td>@a.FaturaSeriNo @a.FaturaSiraNo</td>
     <td>@a.FaturaTarih</td>
     <td>@a.Saat</td>
 
     <td>@a.Toplam</td>
-    <td><a href="/Fatura/FaturaGetir/@a.Faturaid/" class="btn btn-warning">Güncelle</a></td>
-    <td><a href="/Fatura/FaturaDetay/@a.Faturaid/" class="btn btn-success" style="background-color:dodgerblue"data-toggle="modal" data-target="#Modal2">Popup</a></td>
-    <td><a href="/Fatura/FaturaDetay/@a.Faturaid/" class="btn btn-success" style="background-color:thistle">Kalem</a></td>
+    <td><a href="/Fatura/FaturaGetir/@a.Faturaid/" class="btn btn-warning">Update</a></td>
+
+    <td><a href="/Fatura/FaturaDetay/@a.Faturaid/" class="btn btn-success" style="background-color:thistle">Entry</a></td>
 
 
 
@@ -42,7 +42,7 @@
 
 </table>
 
-<a href="/Fatura/FaturaEkle" class="btn btn-info">Yeni Fatura Girişi</a>
+<a href="/Fatura/FaturaEkle" class="btn btn-info">New Invoice Entry</a>
 <br /><br />
 <button type="button" class="btn btn-warning" style="background-color:#e52e2e;color:white"data-toggle="modal" data-target="#Modal1">Popup Penceresi</button>
 
@@ -50,15 +50,15 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title">Popup Diyalog Ekranı</h2>
+                <h2 class="modal-title">Popup Dialog Screen</h2>
 
             </div>
             <div class="modal-body">
                 <table class="table table-bordered">
                     <tr>
-                        <td>Seri No</td>
-                        <td>Sıra No</td>
-                        <td>Tutar</td>
+                        <td>Serial number</td>
+                        <td>Serial number 2</td>
+                        <td>Total</td>
                     </tr>
                     @foreach (var x in Model)
                     {
@@ -69,7 +69,7 @@
                     </tr>
                     }
                 </table>
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Tamam</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Ok</button>
             </div>
         </div>
     </div>
@@ -81,14 +81,14 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title">Kalem Popup Diyalog Ekranı</h2>
+                <h2 class="modal-title">New Entry Popup Dialog Screen</h2>
 
             </div>
             <div class="modal-body">
                 <table class="table table-bordered">
                     <tr>
-                        <td>Açıklama</td>
-                        <td>Tutar</td>
+                        <td>Explanation</td>
+                        <td>Total</td>
                        
                     </tr>
                     @foreach (var x in Model)
@@ -100,7 +100,7 @@
                         </tr>
                     }
                 </table>
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Tamam</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Ok</button>
             </div>
         </div>
     </div>

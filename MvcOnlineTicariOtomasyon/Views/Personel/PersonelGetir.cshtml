@@ -16,22 +16,22 @@
     @Html.TextBoxFor(x => x.PersonelAd, new { @class = "form-control" })
 
     <br />
-    @Html.Label("Personal Nachname")
+    @Html.Label("Personal Surname")
     @Html.TextBoxFor(x => x.PersonelSoyad, new { @class = "form-control" })
     <br />
     @Html.Label("Foto")
     <input type="file" name="PersonelGorsel" />
     <br />
-    @Html.Label("Abteilung")
+    @Html.Label("Department")
     @Html.DropDownListFor(x => x.Departmanid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
     <br />
-    @Html.Label("Adresse")
+    @Html.Label("Address")
     @Html.TextBoxFor(x => x.PersonelAdres, new { @class = "form-control" })
     <br />
-    @Html.Label("Telefonnummer")
+    @Html.Label("Phone number")
     @Html.TextBoxFor(x => x.PersonelTel, new { @class = "form-control" })
     <br />
-    <button class="btn btn-default" style="background-color:yellowgreen">Aktualisieren</button>
+    <button class="btn btn-default" style="background-color:yellowgreen">Update</button>
 </div>
 }
 

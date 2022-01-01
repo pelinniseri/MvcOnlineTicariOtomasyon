@@ -12,7 +12,7 @@
 @using (Html.BeginForm("DepartmanGuncelle", "Departman", FormMethod.Post))
 {
     <div class="form-group">
-        @Html.Label("Abteilungsname")
+        @Html.Label("Department Name")
         @Html.TextBoxFor(x => x.DepartmanAd, new { @class = "form-control" })
         @Html.HiddenFor(x => x.Departmanid)
         <br />

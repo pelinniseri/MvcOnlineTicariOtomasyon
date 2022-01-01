@@ -5,35 +5,35 @@
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 <br />
-<h2>Yeni Ürün Sayfası</h2>
+<h2>New Product Page</h2>
 <br />
 <form class="form-group" method="post">
-    @Html.LabelFor(x => x.UrunAd)
+    @Html.Label("Product Name")
     @Html.TextBoxFor(x => x.UrunAd, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Marka)
+    @Html.Label("Brand")
     @Html.TextBoxFor(x => x.Marka, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Stok)
+    @Html.Label("Stock")
     @Html.TextBoxFor(x => x.Stok, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.AlisFiyat)
+    @Html.Label("Purchase price")
     @Html.TextBoxFor(x => x.AlisFiyat, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.SatisFiyat)
+    @Html.Label("Sale price")
     @Html.TextBoxFor(x => x.SatisFiyat, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Kategori.KategoriID)
+    @Html.Label("Category")
     @Html.DropDownListFor(x => x.Kategoriid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
 
     <br />
-    @Html.LabelFor(x => x.UrunGorsel)
+    @Html.Label("Photo")
     @Html.TextBoxFor(x => x.UrunGorsel, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Durum)
+    @Html.Label("Status")
     @Html.TextBoxFor(x => x.Durum, new { @class = "form-control" })
     <br />
-    <button class="btn btn-primary">Kaydet</button>
+    <button class="btn btn-primary">Save</button>
 </form>
 
 

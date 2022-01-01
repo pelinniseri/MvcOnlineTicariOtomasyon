@@ -5,36 +5,36 @@
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 <br />
-<h2>Ürün Güncelleme</h2>
+<h2>Product Update</h2>
 <br />
 @using (Html.BeginForm("UrunGuncelle", "Urun", FormMethod.Post))
 {
-    @Html.HiddenFor(x=>x.UrunID)
-    @Html.LabelFor(x => x.UrunAd)
+    @Html.HiddenFor(x => x.UrunID)
+    @Html.Label("Product Name")
     @Html.TextBoxFor(x => x.UrunAd, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Marka)
+    @Html.Label("Brand")
     @Html.TextBoxFor(x => x.Marka, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Stok)
+    @Html.Label("Stock")
     @Html.TextBoxFor(x => x.Stok, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.AlisFiyat)
+    @Html.Label("Purchase Price")
     @Html.TextBoxFor(x => x.AlisFiyat, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.SatisFiyat)
+    @Html.Label("Sale Price")
     @Html.TextBoxFor(x => x.SatisFiyat, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Kategori.KategoriID)
-    @Html.DropDownListFor(x=>x.Kategoriid,(List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+    @Html.Label("Category ID")
+    @Html.DropDownListFor(x => x.Kategoriid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.UrunGorsel)
+    @Html.Label("Photo")
     @Html.TextBoxFor(x => x.UrunGorsel, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Durum)
+    @Html.Label("Status")
     @Html.TextBoxFor(x => x.Durum, new { @class = "form-control" })
     <br />
-    <button class="btn btn-warning">Güncelle</button>
+    <button class="btn btn-warning">Update</button>
 
 }
 

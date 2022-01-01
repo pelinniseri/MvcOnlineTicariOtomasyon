@@ -4,33 +4,33 @@
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 <br />
-<h2>Satis Yap</h2>
+<h2>Sell</h2>
 <br />
 <form class="form-group" method="post">
-    @Html.LabelFor(x => x.Urunid)
+    @Html.Label("Product ID")
     <input type="text" name="Urunid" value="@ViewBag.dgr1" class="form-control" readonly/>
     <br />
-    @Html.LabelFor(x => x.Personelid)
+    @Html.Label("Personal ")
     @Html.DropDownListFor(x => x.Personelid, (List<SelectListItem>)ViewBag.dgr3, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Cariid)
+    @Html.Label("Customer ID")
     @Html.TextBoxFor(x => x.Cariid, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Adet)
+    @Html.Label("Quantity")
     <input type="number" class="form-control" max="100" min="0" placeholder="adet girin" id="txt1"
            onchange="sum();"/>
     <br />
-    @Html.LabelFor(x => x.Fiyat)
+    @Html.Label("Price")
 <input type="text" name="Fiyat" value="@ViewBag.dgr2" class="form-control" id="txt2"
       onkeyup="sum();" />
     <br />
-    @Html.LabelFor(x => x.ToplamTutar)
+    @Html.Label("Total")
 <input type="text" name="ToplamTutar" value="0" class="form-control" id="txt3" readonly
       />
 
     <br />
     <br />
-    <button class="btn btn-primary">Satış Yap</button>
+    <button class="btn btn-primary">Sell</button>
 </form>
 <br />
 <script>

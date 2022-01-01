@@ -11,14 +11,14 @@
     <tr>
         <th>ID</th>
         <th>Personal Name</th>
-        <th>Personal Nachname</th>
-        <th>Foto</th>
-        <th>Abteilung</th>
-        <th>Adresse</th>
-        <th>Telefonnummer</th>
-        <th>Löschen</th>
-        <th>Aktualisieren</th>
-        <th>Verkäufe</th>
+        <th>Personal Surname</th>
+        <th>Photo</th>
+        <th>Department</th>
+        <th>Address</th>
+        <th>Phone number</th>
+        <th>Delete</th>
+        <th>Update</th>
+        <th>Sales</th>
 
 
 
@@ -37,8 +37,8 @@
             <td>@k.Departman.DepartmanAd</td>
             <td>@k.PersonelAdres</td>
             <td>@k.PersonelTel</td>
-            <td><a href="/Personel/PersonelSil/@k.Personelid/" class="btn btn-danger">Löschen</a></td>
-            <td><a href="/Personel/PersonelGetir/@k.Personelid/" class="btn btn-warning">Aktualisieren</a></td>
+            <td><a href="/Personel/PersonelSil/@k.Personelid/" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Personel/PersonelGetir/@k.Personelid/" class="btn btn-warning">Update</a></td>
             <td><a href="/Departman/DepartmanPersonelSatis/@k.Personelid/" class="btn btn-success" style="background-color:lightcoral">Detail</a></td>
 
 
@@ -55,5 +55,5 @@
 
 })
 
-<a href="/Personel/PersonelEkle" class="btn btn-info">Mitarbeiter hinzufügen</a>
+<a href="/Personel/PersonelEkle" class="btn btn-info">Add employees</a>
 

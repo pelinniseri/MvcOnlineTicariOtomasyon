@@ -4,13 +4,13 @@
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 <br />
-<h2>Neue Kategorieseite</h2>
+<h2>New category page</h2>
 <br />
 
 <form class="form-group" method="post">
-    @Html.Label("Kategoriename")
+    @Html.Label("Category name")
     @Html.TextBoxFor(x=>x.KategoriAd, new { @class="form-control"})
     <br />
-    <button class="btn btn-info">Speichern</button>
+    <button class="btn btn-info">Save</button>
 </form>
 

@@ -4,16 +4,16 @@
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 <br />
-<h2>Kategorie-Update</h2>
+<h2>Category update</h2>
 <br />
 
 @using (Html.BeginForm("KategoriGuncelle", "Kategori", FormMethod.Post)) {
     <div class="form-group">
-        @Html.Label("Kategoriename")
+        @Html.Label("Category name")
         @Html.TextBoxFor(x => x.KategoriAd, new {@class="form-control" })
        @Html.HiddenFor(x=>x.KategoriID)
         <br />
-        <button class="btn btn-warning">Aktualisieren</button>
+        <button class="btn btn-warning">Update</button>
     
     </div>
 }

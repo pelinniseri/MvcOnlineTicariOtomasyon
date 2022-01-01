@@ -6,37 +6,37 @@
 }
 
 <br />
-<h2>Aktualisierung der Verkaufstransaktion</h2>
+<h2>Update of the sales transaction</h2>
 <br />
 @using (Html.BeginForm("SatisGuncelle", "Satis", FormMethod.Post))
 {
     @Html.HiddenFor(x => x.Satisid)
-    @Html.Label("Produkt")
+    @Html.Label("Product")
     @Html.DropDownListFor(x => x.Urunid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
 
     <br />
-    @Html.Label("Kunde")
+    @Html.Label("Customer")
     @Html.DropDownListFor(x => x.Cariid, (List<SelectListItem>)ViewBag.dgr2, new { @class = "form-control" })
 
     <br />
-    @Html.Label("Mitarbeiter")
+    @Html.Label("Employees")
     @Html.DropDownListFor(x => x.Personelid, (List<SelectListItem>)ViewBag.dgr3, new { @class = "form-control" })
 
-    @Html.Label("Anzahl")
+    @Html.Label("Quantity")
     @Html.TextBoxFor(x => x.Adet, new { @class = "form-control" })
     <br />
-    @Html.Label("Preis")
+    @Html.Label("Price")
     @Html.TextBoxFor(x => x.Fiyat, new { @class = "form-control" })
 
     <br />
-    @Html.Label("Gesamtsumme")
+    @Html.Label("Total")
     @Html.TextBoxFor(x => x.ToplamTutar, new { @class = "form-control" })
     <br />
 
-    @Html.Label("Datum")
+    @Html.Label("Date")
     @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
     <br />
-    <button class="btn btn-warning">Aktualisieren</button>
+    <button class="btn btn-warning">Update</button>
 
 }
 
