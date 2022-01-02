@@ -8,6 +8,7 @@ using PagedList.Mvc;
 using MvcOnlineTicariOtomasyon.Models.Siniflar;
 namespace MvcOnlineTicariOtomasyon.Controllers
 {
+    [Authorize(Roles = ("H"))]
     public class CariController : Controller
     {
         // GET: Cari

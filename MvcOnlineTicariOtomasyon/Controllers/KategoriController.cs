@@ -8,7 +8,8 @@ using PagedList;
 using PagedList.Mvc;
 namespace MvcOnlineTicariOtomasyon.Controllers
 {
-   
+    [Authorize(Roles = ("H"))]
+
     public class KategoriController : Controller
     {
         // GET: Kategori

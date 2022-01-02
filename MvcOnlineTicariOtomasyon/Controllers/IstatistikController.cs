@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using MvcOnlineTicariOtomasyon.Models.Siniflar;
 namespace MvcOnlineTicariOtomasyon.Controllers
 {
+    [Authorize(Roles = ("H"))]
     public class IstatistikController : Controller
     {
         // GET: Istatistik

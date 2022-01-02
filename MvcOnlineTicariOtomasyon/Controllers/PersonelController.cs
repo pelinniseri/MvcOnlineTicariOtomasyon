@@ -9,6 +9,7 @@ using PagedList.Mvc;
 using MvcOnlineTicariOtomasyon.Models.Siniflar;
 namespace MvcOnlineTicariOtomasyon.Controllers
 {
+    [Authorize(Roles = ("H"))]
     public class PersonelController : Controller
     {
         // GET: Personel

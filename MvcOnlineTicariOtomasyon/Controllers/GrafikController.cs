@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace MvcOnlineTicariOtomasyon.Controllers
 {
+    [Authorize(Roles = ("H"))]
     public class GrafikController : Controller
     {
         // GET: Grafik

@@ -8,6 +8,7 @@ using PagedList.Mvc;
 using MvcOnlineTicariOtomasyon.Models.Siniflar;
 namespace MvcOnlineTicariOtomasyon.Controllers
 {
+    [Authorize(Roles = ("H"))]
     public class DepartmanController : Controller
     {
         // GET: Departman
@@ -19,7 +20,8 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             var degerler = c.Departmans.Where(x=> x.Durum==true).ToList().ToPagedList(sayfa, 4);
             return View(degerler);
         }
-     
+
+        
         [HttpGet]
         public ActionResult DepartmanEkle()
         {
@@ -36,6 +38,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             return RedirectToAction("Index");
         }
      
+        
         public ActionResult DepartmanSil(int id)
         {
             var dep = c.Departmans.Find(id);
@@ -49,7 +52,8 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             var dpt = c.Departmans.Find(id);
             return View("DepartmanGetir", dpt);
         }
-      
+
+        
         public ActionResult DepartmanGuncelle(Departman d)
         {
             var dept = c.Departmans.Find(d.Departmanid);
