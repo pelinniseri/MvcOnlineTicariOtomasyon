@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MvcOnlineTicariOtomasyon;
 using MvcOnlineTicariOtomasyon.Controllers;
 using System;
 using System.Collections.Generic;
@@ -18,8 +17,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers.Tests
         {
             CariController objCariController = new CariController();
             ViewResult objViewResult = objCariController.Index() as ViewResult;
-            Assert.AreEqual("Index",objViewResult.ViewName);
-
+            Assert.AreEqual("Index", objViewResult.ViewName);
         }
 
         [TestMethod()]
