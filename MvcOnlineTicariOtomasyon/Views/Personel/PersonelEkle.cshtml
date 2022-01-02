@@ -5,31 +5,31 @@
 }
 
 <br />
-<h2>Neue Angestellteseite</h2>
+<h2>New employee page</h2>
 <br />
 @using (Html.BeginForm("PersonelEkle", "Personel", FormMethod.Post, new { enctype = "multipart-form/data" })) {
     <form class="form-group" method="post">
         @Html.Label("Personal Name")
         @Html.TextBoxFor(x => x.PersonelAd, new { @class = "form-control" })
         <br />
-        @Html.Label("Personal Nachname")
+        @Html.Label("Personal Surname")
         @Html.TextBoxFor(x => x.PersonelSoyad, new { @class = "form-control" })
         <br />
-        @Html.Label("Foto")
+        @Html.Label("Photo")
         <input type="file" name="PersonelGorsel" />
         <br />
 
-        @Html.Label("Abteilung")
+        @Html.Label("Department")
         @Html.DropDownListFor(x => x.Departmanid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
         <br />
-        @Html.Label("Adresse")
+        @Html.Label("Address")
         @Html.TextBoxFor(x => x.PersonelAdres, new { @class = "form-control" })
         <br />
-        @Html.Label("Telefonnummer")
+        @Html.Label("Phone number")
         @Html.TextBoxFor(x => x.PersonelTel, new { @class = "form-control" })
 
         <br />
-        <button class="btn btn-primary">Speichern</button>
+        <button class="btn btn-primary">Save</button>
     </form>
 }
 

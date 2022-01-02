@@ -5,34 +5,34 @@
 }
 
 <br />
-<h2>Fatura Güncelleme</h2>
+<h2>Invoice Update</h2>
 <br />
 @using (Html.BeginForm("FaturaGuncelle", "Fatura", FormMethod.Post))
 {
     @Html.HiddenFor(x => x.Faturaid)
-    @Html.LabelFor(x => x.FaturaSeriNo)
+    @Html.Label("Invoice Serial No")
     @Html.TextBoxFor(x => x.FaturaSeriNo, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.FaturaSiraNo)
+    @Html.Label("Invoice Serial No 2")
     @Html.TextBoxFor(x => x.FaturaSiraNo, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.VergiDairesi)
+    @Html.Label("Tax Administration")
     @Html.TextBoxFor(x => x.VergiDairesi, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.FaturaTarih)
+    @Html.Label("Invoice Date")
     @Html.TextBoxFor(x => x.FaturaTarih, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Saat)
+    @Html.Label("Hour")
     @Html.TextBoxFor(x => x.Saat, new { @class = "form-control" })
-   
+
     <br />
-    @Html.LabelFor(x => x.TeslimEden)
+    @Html.Label("Submitter")
     @Html.TextBoxFor(x => x.TeslimEden, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.TeslimAlan)
+    @Html.Label("Receiver")
     @Html.TextBoxFor(x => x.TeslimAlan, new { @class = "form-control" })
     <br />
-    <button class="btn btn-warning">Güncelle</button>
+    <button class="btn btn-warning">Update</button>
 
 }
 

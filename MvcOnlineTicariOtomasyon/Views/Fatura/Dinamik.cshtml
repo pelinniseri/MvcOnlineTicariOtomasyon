@@ -22,11 +22,11 @@
 
             <h2 class="panel-title pull-left" style="margin-left:10px;">
 
-                <strong>Rechnungspositionsdetails</strong>
+                <strong>Invoice line details</strong>
 
             </h2>
 
-            <button style="margin-right:10px" class="btn btn-primary pull-right" onclick="addNewOrder()">Rechnungserfassung</button>
+            <button style="margin-right:10px" class="btn btn-primary pull-right" onclick="addNewOrder()">Invoice capture</button>
 
         </div>
 
@@ -43,10 +43,10 @@
 
                     <tr>
 
-                        <td>Seri Sıra No : @item.FaturaSeriNo @item.FaturaSiraNo </td>
-                        <td>Kunden : @item.TeslimEden </td>
-                        <td>Tarih : @item.FaturaTarih </td>
-                        <td>Vergi Dairesi : @item.VergiDairesi </td>
+                        <td>Serial No : @item.FaturaSeriNo @item.FaturaSiraNo </td>
+                        <td>Customer : @item.TeslimEden </td>
+                        <td>Date : @item.FaturaTarih </td>
+                        <td>Tax Administration : @item.VergiDairesi </td>
 
                     </tr>
 
@@ -60,12 +60,12 @@
 
                                     <tr>
 
-                                        <th>Erklaerung</th>
+                                        <th>Explanation</th>
 
-                                        <th>Anzahl</th>
+                                        <th>Quantity</th>
 
-                                        <th>Preis</th>
-                                        <th>Betrag</th>
+                                        <th>Price</th>
+                                        <th>Total</th>
 
 
 
@@ -102,7 +102,7 @@
 
                             </table>
 
-                            <span class="pull-right" style="margin-right:100px;"><strong>Totaler Rechnungsbetrag :  </strong> @totalBill</span>
+                            <span class="pull-right" style="margin-right:100px;"><strong>Total invoice amount:  </strong> @totalBill</span>
 
                         </td>
 
@@ -132,7 +132,7 @@
 
                 <a href="#" class="close" data-dismiss="modal">&times;</a>
 
-                <h4>Neue Bestellung hinzufügen</h4>
+                <h4>Add new order</h4>
 
             </div>
 
@@ -142,7 +142,7 @@
 
                     @*Customer Details*@
 
-                    <h5 style="color:#ff6347">Kundendetails</h5>
+                    <h5 style="color:#ff6347">Customer details</h5>
 
                     <hr />
 
@@ -154,7 +154,7 @@
 
                             <label class="control-label col-md-2">
 
-                                Seriennummer
+                                Serial No:
 
                             </label>
 
@@ -166,7 +166,7 @@
 
                             <label class="control-label col-md-2">
 
-                                SıraNo
+                                Serial No 2:
 
                             </label>
 
@@ -180,7 +180,7 @@
 
                             <label class="control-label col-md-2">
 
-                                Datum
+                                Date
 
                             </label>
 
@@ -192,7 +192,7 @@
 
                             <label class="control-label col-md-2">
 
-                                Steuerverwaltung
+                                Tax administration
 
                             </label>
 
@@ -208,7 +208,7 @@
 
                             <label class="control-label col-md-2">
 
-                                Uhr
+                                Hour
 
                             </label>
 
@@ -220,7 +220,7 @@
 
                             <label class="control-label col-md-2">
 
-                                Einreicher
+                                Submitter
 
                             </label>
 
@@ -235,7 +235,7 @@
 
                             <label class="control-label col-md-2">
 
-                                Lieferzone
+                                Receiver
 
                             </label>
 
@@ -247,7 +247,7 @@
 
                             <label class="control-label col-md-2">
 
-                                Gesamtsumme
+                                Total
 
                             </label>
 
@@ -265,7 +265,7 @@
 
                     @*Order Details*@
 
-                    <h5 style="margin-top:10px;color:#ff6347">Rechnungspositionen</h5>
+                <h5 style="margin-top:10px;color:#ff6347">Invoice items</h5>
 
                     <hr />
 
@@ -277,7 +277,7 @@
 
                             <label class="control-label col-md-2">
 
-                                Produktname
+                                Product name
 
                             </label>
 
@@ -289,7 +289,7 @@
 
                             <label class="control-label col-md-2">
 
-                                Preis
+                                Price
 
                             </label>
 
@@ -307,7 +307,7 @@
 
                             <label class="control-label col-md-2">
 
-                                Anzahl
+                                Quantity
 
                             </label>
 
@@ -321,7 +321,7 @@
 
                             <div class="col-md-2 col-lg-offset-4">
 
-                                <a id="addToList" class="btn btn-primary">Zur Liste fügen</a>
+                                <a id="addToList" class="btn btn-primary">Add to list</a>
 
                             </div>
 
@@ -335,13 +335,13 @@
 
                                 <tr>
 
-                                    <th style="width:30%">Produkt</th>
+                                    <th style="width:30%">Product</th>
 
-                                    <th style="width:20%">Stückpreis</th>
+                                    <th style="width:20%">Unit price</th>
 
-                                    <th style="width:15%">Anzahl</th>
+                                    <th style="width:15%">Quantity</th>
 
-                                    <th style="width:25%">Betrag</th>
+                                    <th style="width:25%">Total</th>
 
 
 
@@ -359,9 +359,9 @@
 
                 <div class="modal-footer">
 
-                    <button type="reset" class="btn btn-default" data-dismiss="modal">Abschließen</button>
+                    <button type="reset" class="btn btn-default" data-dismiss="modal">Close</button>
 
-                    <button id="saveOrder" type="submit" class="btn btn-danger">Bestellung speichern</button>
+                    <button id="saveOrder" type="submit" class="btn btn-danger">Save order</button>
 
                 </div>
 

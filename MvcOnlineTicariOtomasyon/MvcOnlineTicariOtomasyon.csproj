@@ -3142,7 +3142,6 @@
     <Content Include="thumber\scss\_site-base.scss" />
     <Content Include="thumber\scss\_site-blocks.scss" />
     <Content Include="thumber\scss\_site-navbar.scss" />
-    <Content Include="Views\UrunDetay\Index.cshtml" />
     <Content Include="Views\Istatistik\simpleTables.cshtml" />
     <Content Include="Views\Istatistik\PView.cshtml" />
     <Content Include="Views\Istatistik\PView2.cshtml" />
@@ -3175,7 +3174,6 @@
     <Content Include="Views\Shared\_CariLayout.cshtml" />
     <Content Include="Views\CariPanel\Index.cshtml" />
     <Content Include="Views\CariPanel\Siparislerim.cshtml" />
-    <Content Include="Views\UrunDetay\UrunDetayiGetir.cshtml" />
     <Content Include="Views\CariPanel\GelenMesajlar.cshtml" />
     <Content Include="Views\CariPanel\GidenMesajlar.cshtml" />
     <Content Include="Views\CariPanel\MesajDetay.cshtml" />

@@ -16,17 +16,16 @@
 <table class="table table-bordered" style="margin-top: 20px">
     <tr>
        
-        <th>Ürün</th>
-        <th>Marka</th>
-        <th>Stok</th>
-        <th>Alış Fiyat</th>
-        <th>Satış Fiyat</th>
-        <th>Kategori</th>
-        <th>Detay</th>
-        
-        <th>Sil</th>
-        <th>Güncelle</th>
-        <th>Satış Yap</th>
+        <th>Product</th>
+        <th>Brand</th>
+        <th>Stock</th>
+        <th>Purchase Price</th>
+        <th>Sale Price</th>
+        <th>Category</th>
+
+        <th>Delete</th>
+        <th>Update</th>
+        <th>Sell</th>
         
     </tr>
 
@@ -41,11 +40,11 @@
     <td>@k.SatisFiyat ₺</td>
     <td>@k.Kategori.KategoriAd</td>
 
-    <td><a href="/UrunDetay/UrunDetayiGetir/@k.UrunID" class="btn btn-info">Detay</a></td>
-    <td><a href="/Urun/UrunSil/@k.UrunID" class="btn btn-danger">Sil</a></td>
-    <td><a href="/Urun/UrunGetir/@k.UrunID" class="btn btn-success">Güncelle</a></td>
+   
+    <td><a href="/Urun/UrunSil/@k.UrunID" class="btn btn-danger">Delete</a></td>
+    <td><a href="/Urun/UrunGetir/@k.UrunID" class="btn btn-success">Update</a></td>
     <td>
-    <a href="/Urun/SatisYap/@k.UrunID" class="btn btn-default" style="background-color:yellow">Satış Yap</a></td>
+    <a href="/Urun/SatisYap/@k.UrunID" class="btn btn-default" style="background-color:yellow">Sell</a></td>
 
 
 
@@ -53,7 +52,7 @@
     }
 </table>
 
-<a href="/Urun/YeniUrun/" class="btn btn-info">Yeni Ürün</a>
+<a href="/Urun/YeniUrun/" class="btn btn-info">New Product</a>
 
 
 

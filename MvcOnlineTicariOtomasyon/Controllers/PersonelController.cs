@@ -19,7 +19,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             return View(personel);
             
         }
-        [Authorize(Roles = ("H"))]
+        
         [HttpGet]
         public ActionResult PersonelEkle()
 
@@ -67,7 +67,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             var prs = c.Personels.Find(id);
             return View("PersonelGetir",prs);
         }
-        [Authorize(Roles = ("H"))]
+        
         public ActionResult PersonelGuncelle(Personel p)
         {
             if (Request.Files.Count > 0)
@@ -88,7 +88,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
-        [Authorize(Roles = ("H"))]
+
         public ActionResult PersonelSil(int id)
         {
             var deger = c.Personels.Find(id);
@@ -97,7 +97,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             return RedirectToAction("Index");
 
         }
-        [Authorize(Roles = ("H"))]
+
         public ActionResult PersonelDetayListe()
         {
             var sorgu = c.Personels.ToList();
