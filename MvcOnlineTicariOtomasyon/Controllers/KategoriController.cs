@@ -8,11 +8,13 @@ using PagedList;
 using PagedList.Mvc;
 namespace MvcOnlineTicariOtomasyon.Controllers
 {
+   
     public class KategoriController : Controller
     {
         // GET: Kategori
-
+        
         Context c = new Context();
+        
         public ActionResult Index(int sayfa=1)
         {
             var degeler = c.Kategoris.ToList().ToPagedList(sayfa,4);
