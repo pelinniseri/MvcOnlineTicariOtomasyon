@@ -20,10 +20,11 @@ namespace MvcOnlineTicariOtomasyon.Controllers
         {
             return View();
         }
-        
+
         [HttpGet]
         public ActionResult Partial1()
         {
+            
             return View();
         }
         [HttpPost]
@@ -34,8 +35,6 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             c.SaveChanges();
             return View("Index");
         }
-
-       
 
         [HttpGet]
         public ActionResult CariLogin()
@@ -55,6 +54,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             }
             else
             {
+                TempData["ErrorMessage"] = "username or password is wrong!";
                 return RedirectToAction("Index", "Login");
             }
             
@@ -79,7 +79,12 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             }
             else
             {
+                //ViewBag.ErrorMessage = "UserName or password is wrong";
+                //ModelState.AddModelError("", "The user name or password provided is incorrect.");
+                //return View();
+                TempData["ErrorMessage"] = "username or password is wrong!";
                 return RedirectToAction("Index","Login");
+
             }
         }
 

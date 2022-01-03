@@ -3,6 +3,7 @@
     Layout = null;
 }
 
+
 <!--A Design by W3layouts
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -55,6 +56,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
 
         <div class="register-full">
+
             <div class="register-left">
                 <div class="register">
                     <p style="font-weight:600;">Bahçeşehir University</p>
@@ -62,7 +64,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="content3">
                         <ul>
                             <li><a class="" href="https://bau.edu.tr/"> Our university</a></li>
-                           
+
                         </ul>
                     </div>
                 </div>
@@ -80,7 +82,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="clear"> </div>
             </div>
             <div class="clear"> </div>
+            @if (TempData["ErrorMessage"] != null)
+            {
+                <div>
+                    <p style="background-color: #db3552; width: 412px; text-align: left; padding-left: 15px; margin-top:20px;" class="alert alert-success register-right" id="successMessage">@TempData["ErrorMessage"]</p>
+                </div>
+            }
         </div>
+
+        <!-- //error -->
+        
+
 
     </section>
     <!-- //section -->
@@ -117,7 +129,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="login-form login-form-left">
                 <div class="agile-row">
                     <h3>Admin Login</h3>
-
                     <div class="clear"></div>
                     <div class="login-agileits-top">
                         @using (Html.BeginForm("AdminLogin", "Login", FormMethod.Post))
@@ -144,14 +155,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
     <!-- //subscribe form popup-->
     <!-- register form popup-->
-    
-
-
-
-
-
-
-
     <!-- //pass form popup-->
 
 
@@ -204,3 +207,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </body>
 <!-- //body ends -->
 </html>
+<style>
+    p {
+        color: black;
+        text-indent: 30px;
+        text-transform: uppercase;
+        margin-left: 643px;
+
+    }
+
+    .alert-success {
+        padding: 5px; 
+    }
+</style>
