@@ -3181,7 +3181,6 @@
     <Content Include="Views\CariPanel\Partial1.cshtml" />
     <Content Include="Views\CariPanel\Partial2.cshtml" />
     <Content Include="Views\Error\PageError.cshtml" />
-    <Content Include="Views\Urun\SatisYap.cshtml" />
     <Content Include="Views\Fatura\Dinamik.cshtml" />
     <Content Include="Views\Kategori\Deneme.cshtml" />
     <Content Include="Views\Login\ForgetPassword.cshtml" />

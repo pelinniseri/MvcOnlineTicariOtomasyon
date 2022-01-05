@@ -10,16 +10,16 @@
 
 <form class="form-group" method="post">
     @Html.Label("Name")
-    @Html.TextBoxFor(x => x.CariAd, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.CariAd, new { @class = "form-control", required = "required"})
     <br />
     @Html.Label("Surname")
-    @Html.TextBoxFor(x => x.CariSoyad, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.CariSoyad, new { @class = "form-control",required = "required"})
     <br />
     @Html.Label("City")
-    @Html.TextBoxFor(x => x.CariSehir, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.CariSehir, new { @class = "form-control"})
     <br />
     @Html.Label("E-Mail")
-    @Html.TextBoxFor(x => x.CariMail, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.CariMail, new { @class = "form-control",required = "required"})
     <br />
     <button class="btn btn-info">Save</button>
 </form>

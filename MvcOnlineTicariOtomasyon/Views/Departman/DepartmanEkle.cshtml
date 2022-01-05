@@ -10,7 +10,7 @@
 
 <form class="form-group" method="post">
     @Html.Label("Department name")
-    @Html.TextBoxFor(x => x.DepartmanAd, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.DepartmanAd, new { @class = "form-control",required="required"})
     <br />
     <button class="btn btn-info">Save</button>
 </form>

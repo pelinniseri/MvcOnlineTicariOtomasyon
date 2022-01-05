@@ -13,19 +13,19 @@
 
     <br />
     @Html.Label("Customer")
-    @Html.DropDownListFor(x => x.Cariid, (List<SelectListItem>)ViewBag.dgr2, new { @class = "form-control" })
+    @Html.DropDownListFor(x => x.Cariid, (List<SelectListItem>)ViewBag.dgr2, new { @class = "form-control"})
 
     <br />
     @Html.Label("Employees")
-    @Html.DropDownListFor(x => x.Personelid, (List<SelectListItem>)ViewBag.dgr3, new { @class = "form-control" })
+    @Html.DropDownListFor(x => x.Personelid, (List<SelectListItem>)ViewBag.dgr3, new { @class = "form-control"})
 
 
     <br />
     @Html.Label("Quantity")
-    @Html.TextBoxFor(x => x.Adet, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.Adet, new { @class = "form-control",required="required"})
     <br />
     @Html.Label("Price")
-    @Html.TextBoxFor(x => x.Fiyat, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.Fiyat, new { @class = "form-control",required="required"})
     <br />
 
     @*@Html.LabelFor(x => x.ToplamTutar)
