@@ -54,7 +54,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             }
             else
             {
-                TempData["ErrorMessage"] = "username or password is wrong!";
+                TempData["ErrorMessage"] = "e-mail or password is wrong!";
                 return RedirectToAction("Index", "Login");
             }
             
