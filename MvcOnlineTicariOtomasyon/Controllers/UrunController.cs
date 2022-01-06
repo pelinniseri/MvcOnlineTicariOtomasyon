@@ -14,7 +14,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
         Context c = new Context();
         public ActionResult Index(string p)
         {
-            var urunler = from x in c.Uruns select x;
+            var urunler = from x in c.Uruns.Where(x => x.Durum == true) select x ;
             if (!string.IsNullOrEmpty(p))
             {
                 urunler = urunler.Where(y => y.UrunAd.Contains(p));

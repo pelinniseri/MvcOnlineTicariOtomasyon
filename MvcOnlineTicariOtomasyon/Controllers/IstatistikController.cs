@@ -37,11 +37,6 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             var deger9 = (from x in c.Uruns orderby x.SatisFiyat ascending select x.UrunAd).FirstOrDefault();
             ViewBag.d9 = deger9;
 
-            var deger10 = c.Uruns.Count(x => x.UrunAd == "Buzdolabı").ToString();
-            ViewBag.d10 = deger10;
-
-            var deger11 = c.Uruns.Count(x => x.UrunAd == "Laptop").ToString();
-            ViewBag.d11 = deger11;
 
             var deger12 = c.Uruns.GroupBy(x => x.Marka).OrderByDescending(z => z.Count()).Select(y => y.Key).FirstOrDefault();
             ViewBag.d12 = deger12;
